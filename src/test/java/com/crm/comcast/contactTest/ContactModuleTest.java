@@ -1,6 +1,7 @@
 package com.crm.comcast.contactTest;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -13,6 +14,7 @@ import com.crm.comcast.pomrepository.Home;
 import com.crm.comcast.pomrepository.Organization;
 import com.crm.comcast.pomrepository.OrganizationInformation;
 
+@Listeners(com.crm.comcast.genericlibrary.ListenerImp.class)
 public class ContactModuleTest extends BaseClass {
 	@Test(groups ="someTest")
 	public void CreateContactTest() throws Throwable {
@@ -74,6 +76,7 @@ public class ContactModuleTest extends BaseClass {
 				
 				//verify the details
 				ContactInformation ci=new ContactInformation(driver);
+				Thread.sleep(3000);
 				String actName = ci.getOrgHeaderSuchMsg().getText();
 				Assert.assertTrue(actName.contains(lastName));
 				

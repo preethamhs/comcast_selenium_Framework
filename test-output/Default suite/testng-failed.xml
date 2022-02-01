@@ -3,17 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practise.TestForListener">
+      <class name="practise.Destination">
         <methods>
-          <include name="configAM"/>
-          <include name="configBM"/>
-          <include name="launchBrowser"/>
-          <include name="configAC"/>
-          <include name="connectDatabase"/>
-          <include name="disconnectDatabase"/>
-          <include name="contactTest"/>
+          <include name="bookTikTest"/>
         </methods>
-      </class> <!-- practise.TestForListener -->
+      </class> <!-- practise.Destination -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

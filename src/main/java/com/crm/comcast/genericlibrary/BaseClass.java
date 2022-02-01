@@ -34,13 +34,13 @@ public class BaseClass {
 		System.out.println("========database connection disconected======");
 	}
 	
-	//@Parameters("browser")
+	@Parameters("browser")
 	@BeforeClass(groups= {"smokeTest","regressionTest"})
-	public void launchBrowser(/*String BROWSER*/) throws Throwable {
+	public void launchBrowser(String BROWSER) throws Throwable {
 		System.out.println("=========launch browser=========");
 		 // read data from property
 	    String URL = flib.readDataFromProperty("url");
-	    String BROWSER = flib.readDataFromProperty("browser");
+	    //String BROWSER = flib.readDataFromProperty("browser");
 	    
 	    //read data from excel
 	    String lastName = elib.readDataFromExcel("contact", 1, 2)+"_"+jlib.getRandomNum();
