@@ -3,6 +3,7 @@ package crm;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.comcast.genericlibrary.ExcelUtility;
@@ -20,9 +21,10 @@ import com.crm.comcast.pomrepository.OrganizationInformation;
 
 public class CreateContactWithOrgTest {
 
-	@Test
+	@Test(dataProvider = "orgDataprovider")
 	public void CreateContactWithOrgTest() throws Throwable {
 		//create objects
+		
 		JavaUtility jlib=new JavaUtility();	
 	    WebDriverUtility wlib=new WebDriverUtility();
 	    FileUtility flib=new FileUtility();
@@ -105,8 +107,8 @@ public class CreateContactWithOrgTest {
 		//logout
 		hp.logout();
 		driver.close();
-
 }
+	
 
 	}
 

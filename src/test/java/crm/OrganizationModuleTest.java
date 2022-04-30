@@ -1,8 +1,10 @@
 package crm;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.comcast.genericlibrary.BaseClass;
+import com.crm.comcast.genericlibrary.ExcelUtility;
 import com.crm.comcast.pomrepository.CreateNewOrganization;
 import com.crm.comcast.pomrepository.Home;
 import com.crm.comcast.pomrepository.Organization;
@@ -42,12 +44,12 @@ public class OrganizationModuleTest extends BaseClass {
 		}*/
 	    //2nd testcase
 		
-		@Test(groups ="regressionTest")
-		public void CreateOrgWithIndustry() throws Throwable{
+		@Test(dataProvider="orgDataprovider",groups = "regressionTest")
+		public void CreateOrgWithIndustry(String orgName1,String industries) throws Throwable{
 		
-		String orgName = elib.readDataFromExcel("org", 1, 2)+"_"+jlib.getRandomNum();
-		String industries = elib.readDataFromExcel("org", 4, 3);
-		                  
+		//String orgName = elib.readDataFromExcel("org", 1, 2)+"_"+jlib.getRandomNum();
+		//String industries = elib.readDataFromExcel("org", 4, 3);
+		  String orgName = orgName1+"_"+jlib.getRandomNum();        
 		//navigate to organization
 		Home hp=new Home(driver);
 		hp.getOrgLnk().click();
@@ -73,9 +75,19 @@ public class OrganizationModuleTest extends BaseClass {
 		 {
 		System.out.println("organization not created successfully==FAIL");
 		 }
-			
-		
-		      			}
+		}
+		@DataProvider
+		 public Object[][] orgDataprovider() throws Throwable{
+			 ExcelUtility elib=new ExcelUtility();
+			 int rowcount = elib.readDataFromExcelRowCount("dataorg");
+			 
+			 Object[][] objArr=new Object[rowcount][2];
+			 for(int i=0;i<rowcount;i++) {
+				 objArr[i][0]=elib.readDataFromExcel("dataorg",i,0);
+				 objArr[i][1]=elib.readDataFromExcel("dataorg",i,1);
+			 }
+			 return objArr;
+		 }
 	}
 
 

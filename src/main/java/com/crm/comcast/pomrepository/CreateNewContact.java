@@ -42,11 +42,8 @@ public class CreateNewContact extends WebDriverUtility {
 		//Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
 		switchToWindow(driver,"Contacts&action");// //a[@href='javascript:window.close();]
-		saveBtn.click();//
-	}//
-	//public void createContact(String contactLastName,String orgName) {
-		
-	//}
+		saveBtn.click();
+	}
 
 	public WebElement getLastNameEdt() {
 		return lastNameTbx;

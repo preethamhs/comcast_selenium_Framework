@@ -13,7 +13,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtility {
 	
 	public String readDataFromExcel(String sheetname,int row,int cell) throws Throwable {
-		FileInputStream fis=new FileInputStream("./data/testData.xlsx");
+		FileInputStream fis=new FileInputStream(IpathConstant.excelPath);
 		Workbook wb = WorkbookFactory.create(fis);
 		String exceldata = wb.getSheet(sheetname).getRow(row).getCell(cell).getStringCellValue();
 		return exceldata;
@@ -25,7 +25,7 @@ public class ExcelUtility {
 		return exceldata;
 	}
 	
-	public int readDataFromExcel(String sheetname) throws Throwable {
+	public int readDataFromExcelRowCount(String sheetname) throws Throwable {
 		FileInputStream fis=new FileInputStream("./data/testData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		int rowcount = wb.getSheet(sheetname).getLastRowNum();
@@ -36,7 +36,7 @@ public class ExcelUtility {
 		FileInputStream fis=new FileInputStream("./data/testData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		wb.getSheet(sheetname).getRow(row).getCell(cell).setCellValue(writeData);
-		FileOutputStream fos=new FileOutputStream("");
+		FileOutputStream fos=new FileOutputStream("./data/testData.xlsx");
 		wb.write(fos);
 		wb.close();
 	}

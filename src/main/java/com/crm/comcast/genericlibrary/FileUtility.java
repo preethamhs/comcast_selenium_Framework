@@ -12,6 +12,7 @@ public class FileUtility {
 		p.load(fis);
 		String propertydata = p.getProperty(key);
 		return propertydata;
+		
 	}
 
 }

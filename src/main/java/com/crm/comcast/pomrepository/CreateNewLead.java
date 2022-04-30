@@ -31,7 +31,26 @@ public class CreateNewLead {
 	public void createLeadAnnualRevenue(String lastName,String company,String annualRevenue) {
 		lastNameTbx.sendKeys(lastName);
 		companyTbx.sendKeys(company);
+		annualRevenueTbx.sendKeys(annualRevenue);
 		saveBtn.click();
 	}
+
+	public WebElement getLastNameTbx() {
+		return lastNameTbx;
+	}
+
+	public WebElement getCompanyTbx() {
+		return companyTbx;
+	}
+
+	public WebElement getAnnualRevenueTbx() {
+		return annualRevenueTbx;
+	}
+
+	public WebElement getSaveBtn() {
+		return saveBtn;
+	}
+	
+	
 
 }

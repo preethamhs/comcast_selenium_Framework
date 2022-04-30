@@ -7,6 +7,8 @@
     <classes>
       <class name="com.crm.comcast.organizationTest.OrganizationModuleTest"/>
       <class name="com.crm.comcast.contactTest.ContactModuleTest"/>
+      <class name="com.crm.comcast.leadTest.CreatNewLeadByGivingInvalidInputToAnnualRevenueTest"/>
+      <class name="com.crm.comcast.leadTest.CreateNewLeadGivingAnnualRevenueTest"/>
     </classes>
   </test> 
   
@@ -15,6 +17,8 @@
     <classes>
       <class name="com.crm.comcast.organizationTest.OrganizationModuleTest"/>
       <class name="com.crm.comcast.contactTest.ContactModuleTest"/>
+      <class name="com.crm.comcast.leadTest.CreatNewLeadByGivingInvalidInputToAnnualRevenueTest"/>
+      <class name="com.crm.comcast.leadTest.CreateNewLeadGivingAnnualRevenueTest"/>
     </classes>
   </test>
   

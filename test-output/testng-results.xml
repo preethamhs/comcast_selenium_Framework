@@ -1,61 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52" started-at="2022-01-30T21:24:54 IST" finished-at="2022-01-30T21:24:54 IST">
+  <suite name="Default suite" duration-ms="72395" started-at="2022-03-26T16:49:11 IST" finished-at="2022-03-26T16:50:23 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52" started-at="2022-01-30T21:24:54 IST" finished-at="2022-01-30T21:24:54 IST">
-      <class name="practise.Destination">
-        <test-method status="PASS" signature="bookTikTest(java.lang.String,java.lang.String)[pri:0, instance:practise.Destination@4b553d26]" name="bookTikTest" duration-ms="6" started-at="2022-01-30T21:24:54 IST" data-provider="bookTicketTest" finished-at="2022-01-30T21:24:54 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[bangalore]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[mumbai]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="72395" started-at="2022-03-26T16:49:11 IST" finished-at="2022-03-26T16:50:23 IST">
+      <class name="practise.FlipkartForPhoneAndAmount">
+        <test-method status="PASS" signature="flipkart()[pri:0, instance:practise.FlipkartForPhoneAndAmount@2c715e84]" name="flipkart" duration-ms="71711" started-at="2022-03-26T16:49:11 IST" finished-at="2022-03-26T16:50:23 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookTikTest -->
-        <test-method status="PASS" signature="bookTikTest(java.lang.String,java.lang.String)[pri:0, instance:practise.Destination@4b553d26]" name="bookTikTest" duration-ms="1" started-at="2022-01-30T21:24:54 IST" data-provider="bookTicketTest" finished-at="2022-01-30T21:24:54 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[goa]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[pune]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bookTikTest -->
-        <test-method status="PASS" signature="bookTikTest(java.lang.String,java.lang.String)[pri:0, instance:practise.Destination@4b553d26]" name="bookTikTest" duration-ms="1" started-at="2022-01-30T21:24:54 IST" data-provider="bookTicketTest" finished-at="2022-01-30T21:24:54 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mangalore]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kerala]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bookTikTest -->
-      </class> <!-- practise.Destination -->
+        </test-method> <!-- flipkart -->
+      </class> <!-- practise.FlipkartForPhoneAndAmount -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
